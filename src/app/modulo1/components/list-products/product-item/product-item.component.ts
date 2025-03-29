@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-product-item',
@@ -6,4 +6,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './product-item.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProductItemComponent { }
+export class ProductItemComponent {
+  imageUrl= input.required<string>();
+ }
